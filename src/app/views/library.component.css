@@ -1,0 +1,34 @@
+.containerInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-items: center; */
+  align-content: center;
+  /* align-items: center; */
+  width: 40wh;
+  /* height: 100vh; */
+}
+.containerSelector {
+  display: flex;
+  justify-content: center;
+  /* justify-items: center; */
+  align-content: center;
+  /* align-items: center; */
+  width: 60wh;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

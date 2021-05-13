@@ -1,0 +1,71 @@
+<div class="zone-pick">
+  <div
+    (click)="choseOne('students')"
+    [ngClass]="curDB === 'students' ? 'dkz-selected-btn' : 'zone-dkz-button'"
+  >
+    Студенти
+  </div>
+  <div
+    (click)="choseOne('professors')"
+    [ngClass]="curDB === 'professors' ? 'dkz-selected-btn' : 'zone-dkz-button'"
+  >
+    Викладачі
+  </div>
+  <div
+    (click)="choseOne('workers')"
+    [ngClass]="curDB === 'workers' ? 'dkz-selected-btn' : 'zone-dkz-button'"
+  >
+    Співробітники Бібліотеки
+  </div>
+  <div
+    (click)="choseOne('books')"
+    [ngClass]="curDB === 'books' ? 'dkz-selected-btn' : 'zone-dkz-button'"
+  >
+    Книжки
+  </div>
+  <div
+    (click)="choseOne('bookAuthors')"
+    [ngClass]="curDB === 'bookAuthors' ? 'dkz-selected-btn' : 'zone-dkz-button'"
+  >
+    Автори
+  </div>
+  <div
+    (click)="choseOne('bookPublishers')"
+    [ngClass]="
+      curDB === 'bookPublishers' ? 'dkz-selected-btn' : 'zone-dkz-button'
+    "
+  >
+    Видавництва
+  </div>
+  <div
+    (click)="choseOne('studentCards')"
+    [ngClass]="
+      curDB === 'studentCards' ? 'dkz-selected-btn' : 'zone-dkz-button'
+    "
+  >
+    Картки студентів
+  </div>
+  <div
+    (click)="choseOne('professorCards')"
+    [ngClass]="
+      curDB === 'professorCards' ? 'dkz-selected-btn' : 'zone-dkz-button'
+    "
+  >
+    Картки викладачів
+  </div>
+</div>
+<table>
+  <tr>
+    <th *ngFor="let key of dataStructure; let i = index">{{ key }}</th>
+  </tr>
+  <tr *ngFor="let myObj of data[curDB]" (click)="getData(i)">
+    <!-- {{ myObj | json }} -->
+    <td *ngFor="let key of dataStructure">{{ myObj[key] }}</td>
+  </tr>
+</table>
+<div class="containerInput">
+  <label *ngFor="let key of dataStructure"
+    >{{ key }}
+    <input type="text" />
+  </label>
+</div>

@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+.zone-pick {
+  margin: 1vh;
+  display: flex;
+  flex-direction: row;
+  gap: 0.248vh;
+}
+.zone-dkz-button {
+  flex: 1;
+  color: coral;
+  border: thin solid darkgrey;
+  background-color: snow;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 0.248em;
+  cursor: pointer;
+}
+.dkz-selected-btn {
+  flex: 1;
+  border: thin solid darkgrey;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 0.248em;
+  cursor: pointer;
+  background-color: green;
+  color: snow;
+}
